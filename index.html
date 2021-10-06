@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+    <title>Desafio 1</title>
+
+</head>
+
+<body>
+    <div id="app">
+        <table class="table">
+            <tr>
+                <th>#</th>
+                <th>nombre</th>
+                <th>apellido</th>
+                <th>rut</th>
+                <th>nacimiento</th>
+                <th>edad</th>
+            </tr>
+            <tr v-for="(persona,index) in listado" :key="index">
+                <td> {{persona.id}}</td>
+                <td> {{persona.nombre}}</td>
+                <td> {{persona.apellido}}</td>
+                <td> {{persona.rut}}</td>
+                <td> {{persona.nacimiento}}</td>
+                <td> {{persona.edad}}</td>
+
+
+            </tr>
+        </table>
+
+    </div>
+
+
+
+
+
+
+
+    <script>
+        const app = new Vue({
+
+            el: "#app",
+            data: {
+                listado: [{
+                    id: "1",
+                    nombre: "Juan",
+                    apellido: "gonzalez",
+                    rut: "13.333.444-6",
+                    nacimiento: "10 agosto",
+                    edad: "34 años",
+
+                },
+                {
+                    id: "2",
+                    nombre: "Juana",
+                    apellido: "gonzalez",
+                    rut: "13.333.444-6",
+                    nacimiento: "13 agosto",
+                    edad: "36 años",
+                },
+                {
+                    id: "3",
+                    nombre: "maria",
+                    apellido: "gonzalez",
+                    rut: "13.333.444-6",
+                    nacimiento: "10 agosto",
+                    edad: "34 años",
+                },
+
+                ]
+            }
+
+        })
+    </script>
+
+
+</body>
+
+</html>
